@@ -213,13 +213,9 @@ a {
     box-shadow: 0 3px 16px 0 rgb(0 0 0 / 0.1);
     z-index: 10;
 }
-.main-header__brand {
-    display: inline-block;
-    vertical-align: middle;
-}
-.main-navigation {
-    display: inline-block;
-    vertical-align: middle;
+.main-header .container {
+    display: flex;
+    align-items: center;
 }
 .main-navigation__item {
     display: inline-block;
