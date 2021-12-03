@@ -108,6 +108,7 @@
     margin-right: 3%;
     padding: 30px 60px;
     box-sizing: border-box;
+    transition: all 0.4s ease;
 }
 .service-card__title {
     text-transform: uppercase;
@@ -232,9 +233,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(19 69 230 / 0.9);
-    visibility: hidden;
     z-index: 1;
+    transition: all 0.4s ease 0s;
 }
 .portfolio-item__info {
     position: absolute;
@@ -242,7 +242,10 @@
     left: 80px;
     color: white;
     visibility: hidden;
+    opacity: 0;
     z-index: 1;
+    transition: all 0.4s ease 0s;
+
 }
 .portfolio-item__info a {
     color: white;
@@ -250,6 +253,7 @@
 }
 .portfolio-item:hover .portfolio-item__overlay {
     visibility: visible;
+    background-color: rgba(19, 69, 230, 0.9);
     top: 20px;
     left: 20px;
 }
@@ -257,6 +261,7 @@
     visibility: visible;
     bottom: 24px;
     left: 60px;
+    opacity: 1;
 }
 
 /* Blog seciton styles */
@@ -271,6 +276,7 @@
     width: 30%;
     margin-right: 3%;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .blog-item:hover {
     box-shadow: 0px 10px 20px rgb(5 54 77 / 10%);
@@ -278,8 +284,17 @@
 .blog-item:hover .blog-item__info {
     background-color: white;
 }
-.blog-item img {
+.blog-item__image {
+    overflow: hidden;
+}
+.blog-item__image img {
     width: 100%;
+    vertical-align: middle;
+    transition: all 0.4s ease;
+}
+
+.blog-item:hover img {
+    transform: scale(1.1);
 }
 .blog-item__info {
     background-color: #f8faff;
